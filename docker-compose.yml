@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  servokom-si:
+    image: registry.susa.cloud/servokom-si:latest
+    restart: unless-stopped
+    ports:
+      - 8080:80

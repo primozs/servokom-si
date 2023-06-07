@@ -1,29 +1,77 @@
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter Regular'), local('Inter-Regular'),
+    url('/fonts/inter/Inter-Regular.woff2?v=3.19') format('woff2');
+}
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Inter Medium'), local('Inter-Medium'),
+    url('/fonts/inter/Inter-Medium.woff2?v=3.19') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Inter SemiBold'), local('Inter-SemiBold'),
+    url('/fonts/inter/Inter-SemiBold.woff2?v=3.19') format('woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 body {
   padding: 0;
+  margin: 0;
   line-height: inherit;
+  overflow-x: hidden;
+  background: url(/background/bg.gif) repeat-x scroll center top;
+  @apply bg-dark text-dirtyblack;
+}
+
+h1 {
+  @apply text-darkblue text-2xl font-medium leading-10;
+}
+
+h2 {
+  @apply text-darkgreen text-xl font-medium leading-9 mt-2 first-of-type:mt-0;
+}
+
+h2,
+h3 {
+  @apply text-darkgreen;
+}
+
+strong,
+p {
+  @apply mb-2 leading-5;
+}
+
+a {
+  @apply text-darkblue;
+}
+
+.maincontent ul {
+  @apply list-disc list-outside pl-8;
 }
