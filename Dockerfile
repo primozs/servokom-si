@@ -17,6 +17,7 @@ RUN yarn build
 FROM nginx:1.23.1-alpine AS release
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
+COPY ./deploy/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist ./
 COPY --from=builder /app/public ./
 EXPOSE 80
