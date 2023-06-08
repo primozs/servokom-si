@@ -1,7 +1,7 @@
 {
   "name": "servokom-si",
   "description": "Servokom qwik website",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": ">=15.0.0"
   },
