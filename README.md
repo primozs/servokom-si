@@ -36,6 +36,10 @@ yarn build # or `yarn build`
 
 ## Static Site Generator (Node.js)
 
-```
+```shell
 yarn build.server
 ```
+
+## Optimize images
+
+- [img-optimize](https://virtubox.github.io/img-optimize)

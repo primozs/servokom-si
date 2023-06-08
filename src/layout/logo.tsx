@@ -3,13 +3,16 @@ import { Image } from '~/ui/image';
 
 export const Logo = component$(() => {
   return (
-    <Image
-      src="/logos/servokom.png"
-      width="277"
-      height="92"
-      alt="Servokom"
-      fetchPriority="high"
-      layout="unstyled"
-    />
+    <picture>
+      <source type="image/webp" srcSet="/logos/servokom.png.webp" />
+      <Image
+        src="/logos/servokom.png"
+        width="277"
+        height="92"
+        alt="Servokom"
+        fetchPriority="high"
+        layout="unstyled"
+      />
+    </picture>
   );
 });

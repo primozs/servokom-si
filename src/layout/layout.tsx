@@ -13,7 +13,7 @@ export const Layout = component$<Props>((props) => {
   return (
     <div
       class="bg-local w-full"
-      style="background: url('/background/bg-top.jpg') repeat-x scroll center top;"
+      style="background: url('/background/bg-top.jpg.webp') repeat-x scroll center top;"
     >
       <Header />
       <div class="max-w-4xl mx-auto bg-white rounded-3xl pl-1.5">
@@ -31,22 +31,31 @@ export const Layout = component$<Props>((props) => {
           <aside class="mt-1.5 space-y-1.5 mb-10">
             <ServicesCard />
 
-            <Image
-              src="/logos/task-diversey.jpg"
-              width="264"
-              height="264"
-              alt="Taski diversey"
-              fetchPriority="high"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/logos/task-diversey.jpg.webp"
+              />
+              <Image
+                src="/logos/task-diversey.jpg"
+                width="264"
+                height="264"
+                alt="Taski diversey"
+                fetchPriority="high"
+              />
+            </picture>
 
-            <Image
-              src="/logos/kiehel.jpg"
-              width="298"
-              height="126"
-              alt="kiehel"
-              fetchPriority="high"
-              layout="unstyled"
-            />
+            <picture>
+              <source type="image/webp" srcSet="/logos/kiehel.jpg.webp" />
+              <Image
+                src="/logos/kiehel.jpg"
+                width="298"
+                height="126"
+                alt="kiehel"
+                fetchPriority="high"
+                layout="unstyled"
+              />
+            </picture>
           </aside>
           <main
             class={[

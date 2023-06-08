@@ -5,7 +5,7 @@ export const ServicesCard = component$(() => {
   useStylesScoped$(`
   .img {
     height: 270px;
-    background-image:    url(/background/sidebg.png);
+    background-image:    url(/background/sidebg.png.webp);
     background-size:     cover;                    
     background-repeat:   no-repeat;
     background-position: center center;  

@@ -4,14 +4,17 @@ import { Image } from '~/ui/image';
 export default component$(() => {
   return (
     <section role="presentation" class="relative">
-      <Image
-        src="/background/bg-cont.jpg"
-        width="634"
-        height="265"
-        alt="Servokom ozadje"
-        fetchPriority="high"
-        layout="responsive"
-      />
+      <picture>
+        <source type="image/webp" srcSet="/background/bg-cont.jpg.webp" />
+        <Image
+          src="/background/bg-cont.jpg"
+          width="634"
+          height="265"
+          alt="Servokom ozadje"
+          fetchPriority="high"
+          layout="responsive"
+        />
+      </picture>
       <div
         class="`
         absolute inset-0
